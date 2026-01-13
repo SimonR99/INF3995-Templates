@@ -11,11 +11,11 @@ RUN apt install lsb-release wget curl gnupg git python3-pip gedit -y
 RUN apt install mesa-utils libglu1-mesa-dev freeglut3-dev mesa-common-dev -y
 
 
-# INSTALL IGNITION GAZEBO
+# INSTALL GAZEBO HARMONIC
 RUN wget https://packages.osrfoundation.org/gazebo.gpg -O /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg
 RUN echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null
 
-RUN apt update; apt install ignition-fortress -y
+RUN apt update; apt install gz-harmonic -y
 
 
 # DISPLAY STUFF
@@ -40,7 +40,7 @@ RUN apt update; apt install ros-humble-desktop -y
 RUN pip3 install rosdep
 
 RUN echo "source /opt/ros/humble/setup.bash" >> /root/.bashrc
-RUN echo "export GZ_VERSION=fortress" >> /root/.bashrc
+RUN echo "export GZ_VERSION=harmonic" >> /root/.bashrc
 
 
 ################### YOUR COMMANDS ###################
