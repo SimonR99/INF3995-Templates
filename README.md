@@ -5,8 +5,7 @@ Welcome To INF3995. This repo contains all the base templates you will need for 
 ## Dev environment
 
 We will be using Ubuntu 22.04 as a base environment for the project. There are many way to get am Ubuntu environment 
-(WSL, Docker images, VMs, Dual booting, ect). Will will always try to help you to the best of our knowledge. However, we
-will only support two type of installation: A dual boot Ubuntu and a docker container with a VNC server.
+(WSL, Docker images, VMs, Dual booting, ect). Will will always try to help you to the best of our knowledge. However, we will only support two type of installation: A dual boot Ubuntu and a docker container with/without a VNC server.
 
 The installation instructions are provided in the [Installation](Installation) folder
 

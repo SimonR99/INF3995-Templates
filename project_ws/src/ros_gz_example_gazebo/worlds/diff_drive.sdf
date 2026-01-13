@@ -1,18 +1,18 @@
 <?xml version="1.0" ?>
 <!--
   Try sending commands:
-    ign topic -t "/limo/cmd_vel" -m ignition.msgs.Twist -p "linear: {x: 1.0}, angular: {z: -0.1}"
+    gz topic -t "/limo/cmd_vel" -m gz.msgs.Twist -p "linear: {x: 1.0}, angular: {z: -0.1}"
     ros2 topic pub /limo/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 5.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: -0.1}}"
   Listen to odometry:
-    ign topic -e -t /limo/odometry
+    gz topic -e -t /limo/odometry
     ros2 topic echo /limo/odometry
 -->
 <sdf version="1.8">
   <world name="demo">
-    <plugin filename="ignition-gazebo-physics-system" name="ignition::gazebo::systems::Physics"/>
-    <plugin filename="ignition-gazebo-sensors-system" name="ignition::gazebo::systems::Sensors"><render_engine>ogre2</render_engine></plugin>
-    <plugin filename="ignition-gazebo-scene-broadcaster-system" name="ignition::gazebo::systems::SceneBroadcaster"/>
-    <plugin filename="ignition-gazebo-user-commands-system" name="ignition::gazebo::systems::UserCommands"/>
+    <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics"/>
+    <plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors"><render_engine>ogre2</render_engine></plugin>
+    <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster"/>
+    <plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands"/>
 
     <light name="sun" type="directional">
       <cast_shadows>true</cast_shadows>
