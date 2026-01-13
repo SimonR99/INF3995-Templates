@@ -13,7 +13,7 @@ apt install mesa-utils libglu1-mesa-dev freeglut3-dev mesa-common-dev -y
 wget https://packages.osrfoundation.org/gazebo.gpg -O /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null
 
-apt update; apt install ignition-fortress -y
+apt update; apt install gz-harmonic -y
 
 
 # INSTALL ROS2
@@ -28,8 +28,12 @@ apt update; apt install ros-humble-desktop -y
 
 pip3 install rosdep
 
-echo "source /opt/ros/humble/setup.bash" >> /root/.bashrc
-echo "export GZ_VERSION=fortress" >> /root/.bashrc
+ACTUAL_USER=${SUDO_USER:-$USER}
+USER_HOME=$(eval echo ~$ACTUAL_USER)
+
+echo "source /opt/ros/humble/setup.bash" >> $USER_HOME/.bashrc
+echo "export GZ_VERSION=harmonic" >> $USER_HOME/.bashrc
+source $USER_HOME/.bashrc
 
 
 
