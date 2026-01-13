@@ -1,0 +1,11 @@
+version: '3.4'
+services:
+  ros:
+    build: ./Installation/Linux-Docker-X11
+    volumes:
+      - ./:/root/workspaces/
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /tmp/.Xauthority:/tmp/.Xauthority:rw
+    environment:
+      - DISPLAY=$DISPLAY
+    command: sleep infinity

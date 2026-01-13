@@ -10,6 +10,8 @@ will only support two type of installation: A dual boot Ubuntu and a docker cont
 
 The installation instructions are provided in the [Installation](Installation) folder
 
+**Note:** This repository also includes a dev container configuration in the `.devcontainer` folder for VS Code users who prefer using Dev Containers.
+
 ## Running the base simulation
 
-Since we are using ROS2 and gazebo fortress, we will be providing you a modified version of the [proposed template](https://github.com/gazebosim/ros_gz_project_template/tree/fortress) that already includes the limo model. The template workspace is available in the [project_ws](project_ws) folder. We recommend you use this folder as a base for your project as it already comes with a lot of utilities that can be modified for your project.
+Since we are using ROS2 and gazebo harmonic, we will be providing you a modified version of the [proposed template](https://github.com/gazebosim/ros_gz_project_template/tree/fortress) that already includes the limo model. The template workspace is available in the [project_ws](project_ws) folder. We recommend you use this folder as a base for your project as it already comes with a lot of utilities that can be modified for your project.
