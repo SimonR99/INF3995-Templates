@@ -73,7 +73,7 @@ def main():
         print("\n--- 1b. Object Detection (High Confidence conf=0.8) ---")
         payload_high_conf = {
             "image": img_b64,
-            "conf": 0.8
+            "conf": 0.7
         }
         response = requests.post(f"{API_URL}/detect", headers=HEADERS, json=payload_high_conf)
         data = response.json()
@@ -91,7 +91,7 @@ def main():
         payload = {
             "image": img_b64,
             "visual_prompts": crop_b64,
-            "conf": 0.05
+            "conf": 0.02
         }
         response = requests.post(f"{API_URL}/detect", headers=HEADERS, json=payload)
         data = response.json()
@@ -108,7 +108,6 @@ def main():
         payload = {
             "image": img_b64,
             # "text_prompts": ["goal", "shoes"], # These were for soccer image?
-            # Original example used "chair", "lamp" for test_image_3.png
             "text_prompts": ["chair", "lamp"],
             "conf": 0.05
         }
