@@ -39,3 +39,5 @@ project_ws/log/
 # Editors
 **/.idea
 **/.vscode
+detection_result_*
+

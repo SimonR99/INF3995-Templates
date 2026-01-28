@@ -14,3 +14,15 @@ The installation instructions are provided in the [Installation](Installation) f
 ## Running the base simulation
 
 Since we are using ROS2 and gazebo harmonic, we will be providing you a modified version of the [proposed template](https://github.com/gazebosim/ros_gz_project_template/tree/fortress) that already includes the limo model. The template workspace is available in the [project_ws](project_ws) folder. We recommend you use this folder as a base for your project as it already comes with a lot of utilities that can be modified for your project.
+
+
+## AI API usage
+
+You can see example of how to use the AI API in the [ai_examples](ai_examples) folder. Their is two API. The first one is for image detection (bounding box) and the second one is for the LLM. You can test both with the default API key (rate limited). If you use those API, ask your TA for a specific API key.
+
+**URLs:**
+- API: https://inf3995.share.zrok.io
+- Docs: https://inf3995.share.zrok.io/docs
+- Health: https://inf3995.share.zrok.io/health
+
+---
